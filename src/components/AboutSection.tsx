@@ -1,6 +1,7 @@
 import { Code2, Smartphone, Cpu, Palette } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
+import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
 
 const AboutSection = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal({ threshold: 0.1 });
@@ -61,7 +62,7 @@ const AboutSection = () => {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center p-8 hover-lift transition-all duration-500 hover:rotate-1">
                 <div className="w-full h-full rounded-xl bg-muted flex items-center justify-center overflow-hidden group">
                   <img
-                    src="ISOTECH_PROFILE.jpg"
+                    src={profileImage}
                     alt="My Profile"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

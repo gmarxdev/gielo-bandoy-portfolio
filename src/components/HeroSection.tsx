@@ -1,6 +1,7 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
 
 const HeroSection = () => {
 
@@ -30,7 +31,7 @@ const HeroSection = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-glow-pulse"></div>
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary/20 overflow-hidden bg-secondary flex items-center justify-center hover-lift transform hover:rotate-2 transition-all duration-500">
                   <img
-                    src="ISOTECH_PROFILE.jpg"
+                    src={profileImage}
                     alt="My Profile"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />

@@ -148,6 +148,7 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Existing animations */
   .animate-fade-up {
     animation: fade-up 0.6s ease-out;
   }
@@ -164,6 +165,125 @@ All colors MUST be HSL.
     animation: slide-in-right 0.6s ease-out;
   }
 
+  /* New enhanced animations */
+  .animate-scale-in {
+    animation: scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-zoom-in {
+    animation: zoom-in 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-slide-up-fade {
+    animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-rotate-in {
+    animation: rotate-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  .animate-reveal-left {
+    animation: reveal-left 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .animate-reveal-right {
+    animation: reveal-right 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-text-reveal {
+    animation: text-reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .hover-tilt {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsla(var(--primary), 0.4);
+    border-color: hsl(var(--primary));
+  }
+
+  /* Utility for scroll-triggered animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Keyframe definitions */
   @keyframes fade-up {
     from {
       opacity: 0;
@@ -203,6 +323,248 @@ All colors MUST be HSL.
     to {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes rotate-in {
+    from {
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(var(--primary), 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsla(var(--primary), 0.5);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes reveal-left {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes reveal-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes text-reveal {
+    from {
+      opacity: 0;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+      opacity: 1;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  /* Circuit and Code themed animations for logo */
+  .animate-circuit-pulse {
+    animation: circuit-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-code-rain {
+    animation: code-rain 20s linear infinite;
+  }
+
+  .animate-circuit-glow {
+    animation: circuit-glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-logo-reveal {
+    animation: logo-reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-scan-line {
+    animation: scan-line 3s linear infinite;
+  }
+
+  @keyframes circuit-pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px hsla(var(--primary), 0.3))
+              drop-shadow(0 0 10px hsla(var(--primary), 0.2));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsla(var(--primary), 0.8))
+              drop-shadow(0 0 30px hsla(var(--primary), 0.4))
+              drop-shadow(0 0 40px hsla(var(--accent), 0.3));
+    }
+  }
+
+  @keyframes code-rain {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    90% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes circuit-glow {
+    from {
+      box-shadow:
+        0 0 10px hsla(var(--primary), 0.3),
+        0 0 20px hsla(var(--primary), 0.2),
+        inset 0 0 10px hsla(var(--primary), 0.1);
+    }
+    to {
+      box-shadow:
+        0 0 20px hsla(var(--primary), 0.6),
+        0 0 40px hsla(var(--primary), 0.4),
+        0 0 60px hsla(var(--accent), 0.3),
+        inset 0 0 20px hsla(var(--primary), 0.2);
+    }
+  }
+
+  @keyframes logo-reveal {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(-180deg);
+      filter: blur(10px);
+    }
+    60% {
+      transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes scan-line {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  /* Circuit board pattern effect */
+  .circuit-pattern {
+    background-image:
+      linear-gradient(90deg, hsla(var(--primary), 0.03) 1px, transparent 1px),
+      linear-gradient(0deg, hsla(var(--primary), 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+  }
+
+  .circuit-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, hsla(var(--primary), 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 70%, hsla(var(--accent), 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 40% 80%, hsla(var(--primary), 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: circuit-drift 15s linear infinite;
+  }
+
+  @keyframes circuit-drift {
+    0% {
+      background-position: 0 0, 40px 40px, 20px 20px;
+    }
+    100% {
+      background-position: 40px 40px, 80px 80px, 60px 60px;
     }
   }
 }

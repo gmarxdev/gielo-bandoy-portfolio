@@ -1,7 +1,11 @@
 import { Code, Smartphone, Database, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 
 const ServicesSection = () => {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal({ threshold: 0.1 });
+  const { setRef: setServiceRef, visibleItems } = useStaggeredReveal(4, { threshold: 0.2 });
+
   const services = [
     {
       icon: Code,
@@ -37,11 +41,20 @@ const ServicesSection = () => {
     <section id="services" className="py-20 lg:py-32 bg-card/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-up">
+          <div
+            ref={sectionRef as React.RefObject<HTMLDivElement>}
+            className={`text-center mb-16 scroll-reveal ${sectionVisible ? 'revealed' : ''}`}
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Services I Offer
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6" />
+            <div
+              className="h-1 bg-primary mx-auto mb-6 transition-all duration-700"
+              style={{
+                width: sectionVisible ? '80px' : '0px',
+                transition: 'width 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s'
+              }}
+            />
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Comprehensive development solutions tailored to your needs
             </p>
@@ -51,14 +64,14 @@ const ServicesSection = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="border-2 hover:border-primary transition-all hover:shadow-xl group animate-fade-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                ref={setServiceRef(index)}
+                className={`border-2 hover:border-primary transition-all duration-500 hover:shadow-2xl group hover-lift hover-glow scroll-scale ${visibleItems.has(index) ? 'revealed' : ''}`}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 mb-6 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                    <service.icon className="w-8 h-8" />
+                  <div className="w-16 h-16 mb-6 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 animate-glow-pulse">
+                    <service.icon className="w-8 h-8 transition-all duration-500 group-hover:scale-110" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -68,10 +81,10 @@ const ServicesSection = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="flex items-center gap-2 text-sm"
+                        className="flex items-center gap-2 text-sm group/item hover:translate-x-2 transition-transform duration-300"
                       >
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary group-hover/item:w-2 group-hover/item:h-2 transition-all duration-300" />
+                        <span className="text-muted-foreground group-hover/item:text-foreground transition-colors duration-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

@@ -15,4 +15,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
+  // for vercel
+  base: process.env.VITE_BASE_PATH || "/gielo-bandoy-portfolio"
 }));

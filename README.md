@@ -1,73 +1,139 @@
-# Welcome to your Lovable project
+# Gielo Mar Bandoy - Portfolio Website
 
-## Project info
+Professional portfolio website for Gielo Mar Bandoy, showcasing web development, mobile app development, and IoT integration projects.
 
-**URL**: https://lovable.dev/projects/ba8ada47-cd79-4e0d-8bf7-515ce871de85
+## Tech Stack
 
-## How can I edit this code?
+- **React 18.3** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Vite 5.4** - Lightning-fast build tool
+- **TailwindCSS 3.4** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible component library
+- **Radix UI** - Headless UI primitives
+- **Lucide React** - Beautiful icon library
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- Modern, responsive design
+- Smooth animations and transitions
+- Interactive UI components
+- Scroll-triggered animations
+- Mobile-friendly navigation
+- Contact form
+- Project showcase
+- Skills and services sections
+- SEO optimized
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ba8ada47-cd79-4e0d-8bf7-515ce871de85) and start prompting.
+## Development
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd gielo-portfolio-main
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Building for Production
 
-## What technologies are used for this project?
+```bash
+npm run build
+```
 
-This project is built with:
+The build output will be in the `dist/` directory.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+### Vercel (Recommended)
 
-Simply open [Lovable](https://lovable.dev/projects/ba8ada47-cd79-4e0d-8bf7-515ce871de85) and click on Share -> Publish.
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will auto-detect Vite and deploy automatically
 
-## Can I connect a custom domain to my Lovable project?
+### Custom Domain
 
-Yes, you can!
+To set up a custom domain, configure it in your hosting provider's settings.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+gielo-portfolio-main/
+├── src/
+│   ├── assets/           # Images and static assets
+│   ├── components/       # React components
+│   │   ├── ui/          # shadcn/ui components
+│   │   ├── HeroSection.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── PortfolioSection.tsx
+│   │   ├── ServicesSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── Navigation.tsx
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── pages/           # Page components
+│   ├── index.css        # Global styles and animations
+│   └── main.tsx         # Application entry point
+├── public/              # Public assets
+├── index.html          # HTML template
+├── vite.config.ts      # Vite configuration
+├── tailwind.config.ts  # Tailwind configuration
+└── package.json        # Dependencies and scripts
+```
+
+## Customization
+
+### Updating Content
+
+Edit the respective component files in `src/components/` to update:
+- Hero section content
+- About section information
+- Portfolio projects
+- Services offered
+- Contact information
+
+### Styling
+
+The project uses TailwindCSS. Modify:
+- `tailwind.config.ts` - Theme configuration
+- `src/index.css` - Global styles and custom animations
+
+### Images
+
+Place your images in:
+- `src/assets/` - For imported images (recommended)
+- `public/` - For static assets accessed via URL
+
+## License
+
+All rights reserved - Gielo Mar Bandoy
+
+## Contact
+
+- Email: [Contact via website form]
+- GitHub: [@gmarxdev](https://github.com/gmarxdev)
+- LinkedIn: [Gielo Mar Bandoy](https://www.linkedin.com/in/gielo-mar-bandoy-b19460339)

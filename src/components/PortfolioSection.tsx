@@ -26,7 +26,7 @@ const PortfolioSection = () => {
     {
       title: "BANCA Mobile App",
       description:
-        "Cross-platform mobile application with intuitive UI for ship online ticketing, payment integration, and order tracking.",
+        "Project BANCA: Digital Sea Transport Optimization for Sustainable Island Tourism in Surigao del Norte.",
       image: banca1,
       tags: ["React Native", "Express", "Neon PostgreSQL", "PayMongo"],
       liveUrl: "https://banca-prototype.vercel.app/",

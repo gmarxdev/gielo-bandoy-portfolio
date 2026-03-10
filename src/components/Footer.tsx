@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
-              GMB<span className="text-primary">.</span>
+              GMRB<span className="text-primary">.</span>
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Building practical digital solutions with clean code and modern design.

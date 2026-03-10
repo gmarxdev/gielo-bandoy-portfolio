@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import banca1 from "@/assets/banca-1.png";
+import dms1 from "@/assets/dms-1.png";
+import seaweed1 from "@/assets/seaweed-dryer1.png";
 import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 
 const PortfolioSection = () => {
@@ -12,30 +15,30 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: "Enterprise Management System",
+      title: "Dormitory Management System",
       description:
-        "Full-stack web application built with PHP CodeIgniter 4 for managing business operations, inventory, and reporting.",
-      image: project1,
-      tags: ["PHP", "MySQL", "JavaScript"],
+        "Full-stack web application built with PHP CodeIgniter 4 for managing dormitory operations, tenants, rooms, payments, and reports.",
+      image: dms1,
+      tags: ["PHP", "MySQL", "JQuery", "Bootstrap"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "E-Commerce Mobile App",
+      title: "BANCA Mobile App",
       description:
-        "Cross-platform mobile application with intuitive UI for online shopping, payment integration, and order tracking.",
-      image: project2,
-      tags: ["React Native", "Firebase", "Stripe API"],
-      liveUrl: "#",
+        "Cross-platform mobile application with intuitive UI for ship online ticketing, payment integration, and order tracking.",
+      image: banca1,
+      tags: ["React Native", "Express", "Neon PostgreSQL", "PayMongo"],
+      liveUrl: "https://banca-prototype.vercel.app/",
       githubUrl: "#",
     },
     {
       title: "IoT Automated Seaweed Dryer System",
       description:
         "IoT prototype using Arduino and sensors for home automation, with web dashboard for remote monitoring and control.",
-      image: project3,
-      tags: ["ESP32", "IoT", "React Native", "Firebase", "WebSocket", "PlatformIO"],
-      liveUrl: "#",
+      image: seaweed1,
+      tags: ["ESP32", "IoT", "PlatformIO", "Vue", "Django", "Firebase"],
+      liveUrl: "https://seaweed-dryer-monitoring.web.app/dashboard",
       githubUrl: "#",
     },
   ];
@@ -52,10 +55,10 @@ const PortfolioSection = () => {
               Featured Projects
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6 transition-all duration-700"
-                 style={{
-                   width: sectionVisible ? '80px' : '0px',
-                   transition: 'width 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s'
-                 }}
+                style={{
+                  width: sectionVisible ? '80px' : '0px',
+                  transition: 'width 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s'
+                }}
             />
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               A selection of my recent work showcasing web, mobile, and IoT development

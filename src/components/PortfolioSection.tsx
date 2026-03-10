@@ -14,6 +14,8 @@ import eggGraderSorter from "@/assets/egg-grader-sorter.jpg";
 import powerConsumptionMonitoring from "@/assets/power-consumption.jpg";
 import trashbin from "@/assets/trashbin.jpg";
 import homestayBooking from "@/assets/homestay-booking.png";
+import restaurantPOS from "@/assets/restaurant-pos.png";
+
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const PortfolioSection = () => {
@@ -119,12 +121,30 @@ const PortfolioSection = () => {
       liveUrl: "#",
       githubUrl: "#",
     },
+    {
+      title: "Homestay Booking System",
+      description:
+        "An Admin-Role Homestay Booking System is a web application for booking homestays.",
+      image: homestayBooking,
+      tags: ["PHP", "MySQL", "JQuery", "Bootstrap"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Point of Sale for Restaurant/Cafe",
+      description:
+        "A mobile app Point of Sale (POS) system designed for restaurants and cafes, featuring order management, inventory tracking, and sales reporting.",
+      image: restaurantPOS,
+      tags: ["Ionic", "Vue", "Local Storage"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
   ];
 
   return (
     <section id="portfolio" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[720px] mx-auto">
           {/* Section Header */}
           <div
             ref={sectionRef as React.RefObject<HTMLDivElement>}

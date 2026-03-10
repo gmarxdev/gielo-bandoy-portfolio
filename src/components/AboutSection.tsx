@@ -12,7 +12,7 @@ const AboutSection = () => {
     {
       icon: Code2,
       title: "Web Development",
-      description: "Building robust web applications with PHP CodeIgniter 4 and modern JavaScript frameworks",
+      description: "Building robust web applications with strong, secured, and modern web technologies",
     },
     {
       icon: Smartphone,
@@ -22,12 +22,12 @@ const AboutSection = () => {
     {
       icon: Cpu,
       title: "IoT Development",
-      description: "Developing connected devices and smart systems with Arduino and embedded solutions",
+      description: "Developing connected devices and smart systems with strong and modern microcontrollers and embedded solutions",
     },
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description: "Crafting user-centered designs that combine aesthetics with functionality",
+      title: "User-Friendly Design",
+      description: "Crafting user-centered and user-friendly designs that combine aesthetics with functionality",
     },
   ];
 

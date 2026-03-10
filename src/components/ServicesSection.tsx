@@ -12,7 +12,7 @@ const ServicesSection = () => {
       title: "Web App Development",
       description:
         "Custom web applications built with modern technologies and best practices. From simple websites to complex enterprise systems.",
-      features: ["PHP CodeIgniter 4", "Framework7 & Vue.js", "RESTful APIs", "Responsive Design"],
+      features: ["React", "Express", "Neon PostgreSQL", "Tailwind CSS",  "PHP CodeIgniter 4", "Ionic & Vue.js", "RESTful APIs", "Responsive Design"],
     },
     {
       icon: Smartphone,

@@ -42,7 +42,7 @@ const HeroSection = () => {
             {/* Text Content with Staggered Animations */}
             <div className="order-1 md:order-2 text-center md:text-left">
               <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
-                Web & Mobile App Developer
+                Software Engineer & IoT Developer
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 <span className="block animate-text-reveal" style={{ animationDelay: '0.3s' }}>

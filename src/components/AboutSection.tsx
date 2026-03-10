@@ -84,7 +84,7 @@ const AboutSection = () => {
                 I create systems that solve real problems and improve how people work or interact with technology.
               </p>
               <div className="flex flex-wrap gap-3 pt-4">
-                {['Full Stack[React, React Native, Express, Neon PostgreSQL, Tailwind CSS]', 'Automation Tools[n8n]', 'IoT Solutions[Arduino, ESP32, Raspberry Pi, Firebase], Tools[VS Code, Git, Postman, Claude, ChatGPT]',].map((tech, idx) => (
+                {['Full Stack = [React, React Native, Express, Neon PostgreSQL, Tailwind CSS]', 'Automation Tools = [n8n]', 'IoT Solutions = [Arduino, ESP32, Raspberry Pi, Firebase]', 'Tools = [VS Code, Git, Postman, Claude, ChatGPT]',].map((tech, idx) => (
                   <span
                     key={tech}
                     className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default transform hover:scale-110 hover:-rotate-3"

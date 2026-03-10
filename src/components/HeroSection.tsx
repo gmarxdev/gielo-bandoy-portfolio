@@ -53,8 +53,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: '0.7s' }}>
-                I build practical digital solutions with clean code and modern
-                design. Specializing in web apps, mobile development, and IoT
+                I build practical digital solutions. Specializing in web apps, mobile development, and IoT
                 integration.
               </p>
             </div>

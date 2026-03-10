@@ -84,7 +84,7 @@ const AboutSection = () => {
                 I create systems that solve real problems and improve how people work or interact with technology.
               </p>
               <div className="flex flex-wrap gap-3 pt-4">
-                {['EMS', 'PHP', 'JavaScript', 'VUE', 'Web Dev', 'Mobile Dev', 'IoT'].map((tech, idx) => (
+                {['Web Applications', 'Mobile Applications', 'User-Friendly Design', 'Problem Solving', 'Automation Tools', 'IoT Solutions', 'Digital Solutions'].map((tech, idx) => (
                   <span
                     key={tech}
                     className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default transform hover:scale-110 hover:-rotate-3"

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
-import banca1 from "@/assets/banca-1.png";
-import dms1 from "@/assets/dms-1.png";
+import banca1 from "@/assets/banca1.png";
+import dms1 from "@/assets/dms1.png";
 import seaweed1 from "@/assets/seaweed-dryer1.png";
 import { useScrollReveal, useStaggeredReveal } from "@/hooks/useScrollReveal";
 

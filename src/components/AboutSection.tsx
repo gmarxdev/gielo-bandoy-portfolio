@@ -78,17 +78,10 @@ const AboutSection = () => {
                 Transforming Ideas Into Digital Reality
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a web and mobile app developer with expertise in creating
-                practical, user-friendly digital solutions. My experience spans
-                across full-stack web development using PHP CodeIgniter 4,
-                modern frontend technologies, and mobile app development.
+                I’m a web and mobile app developer focused on building practical and user-friendly digital solutions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in building real-world systems that solve actual
-                problems, with a focus on clean code architecture and intuitive
-                user experiences. From enterprise web applications to IoT
-                prototypes, I bring technical expertise and creative problem-solving
-                to every project.
+                I create systems that solve real problems and improve how people work or interact with technology.
               </p>
               <div className="flex flex-wrap gap-3 pt-4">
                 {['EMS', 'PHP', 'JavaScript', 'VUE', 'Web Dev', 'Mobile Dev', 'IoT'].map((tech, idx) => (

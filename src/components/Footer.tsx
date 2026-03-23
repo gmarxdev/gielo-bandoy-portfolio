@@ -1,7 +1,9 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Eye } from "lucide-react";
+import { useVisitorCount } from "@/hooks/useVisitorCount";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const visitCount = useVisitorCount();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -81,6 +83,15 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground text-center sm:text-left">
             © {currentYear} Gielo Mar Bandoy. All rights reserved.
           </p>
+
+          {/* Visit Counter */}
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
+            <Eye className="h-3.5 w-3.5" />
+            <span>
+              {visitCount.toLocaleString()} {visitCount === 1 ? "visit" : "visits"}
+            </span>
+          </div>
+
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Made with <Heart className="h-4 w-4 text-primary fill-primary" /> and
             lots of coffee

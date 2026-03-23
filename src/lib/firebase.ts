@@ -1,17 +1,14 @@
-// src/lib/firebase.ts
-// Replace the values below with your Firebase project config.
-// Go to: Firebase Console → Your Project → Project Settings → Your Apps → SDK setup
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyAq5yAH6I93AyTcb0bvLASCPrDZCAS77II",
+  authDomain: "portfolio-visit-counter-aee38.firebaseapp.com",
+  databaseURL: "https://portfolio-visit-counter-aee38-default-rtdb.firebaseio.com",
+  projectId: "portfolio-visit-counter-aee38",
+  storageBucket: "portfolio-visit-counter-aee38.firebasestorage.app",
+  messagingSenderId: "1031978534423",
+  appId: "1:1031978534423:web:382cce9236177400e73e52",
 };
 
 const app = initializeApp(firebaseConfig);

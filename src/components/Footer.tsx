@@ -3,7 +3,7 @@ import { useVisitorCount } from "@/hooks/useVisitorCount";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const visitCount = useVisitorCount();
+  const { count: visitCount, loading: visitLoading } = useVisitorCount();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -87,9 +87,13 @@ const Footer = () => {
           {/* Visit Counter */}
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
             <Eye className="h-3.5 w-3.5" />
-            <span>
-              {visitCount.toLocaleString()} {visitCount === 1 ? "visit" : "visits"}
-            </span>
+            {visitLoading ? (
+              <span className="w-12 h-3 rounded bg-primary/20 animate-pulse" />
+            ) : (
+              <span>
+                {visitCount.toLocaleString()} {visitCount === 1 ? "visit" : "visits"}
+              </span>
+            )}
           </div>
 
           <p className="text-sm text-muted-foreground flex items-center gap-1">

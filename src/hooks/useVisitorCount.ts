@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
 import { ref, runTransaction, onValue } from "firebase/database";
 
-const SESSION_KEY = "gmrb_visited_this_session";
+const SESSION_KEY = "gmrb_fb_session_v1";
 
 /**
  * Global visit counter backed by Firebase Realtime Database.

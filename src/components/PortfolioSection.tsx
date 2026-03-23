@@ -61,7 +61,7 @@ const personalProjects: Project[] = [
     description:
       "An Admin-Role Homestay Booking System is a web application for booking homestays.",
     image: homestayBooking,
-    tags: ["PHP", "MySQL", "JQuery", "Bootstrap"],
+    tags: ["PHP", "MySQL", "JQuery", "Bootstrap", "Croppy/Dropzone", "MPDF"],
     liveUrl: "#",
     githubUrl: "#",
   },

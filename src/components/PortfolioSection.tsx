@@ -11,6 +11,7 @@ import eggGraderSorter from "@/assets/egg-grader-sorter.jpg";
 import powerConsumptionMonitoring from "@/assets/power-consumption.jpg";
 import trashbin from "@/assets/trashbin.jpg";
 import restaurantPOS from "@/assets/restaurant-pos.png";
+import homestayBooking from "@/assets/homestay-booking.png";
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -52,6 +53,15 @@ const personalProjects: Project[] = [
       "IoT-based smart bin with level indicator using AT89S52 microcontroller with buzzer integrated for alerting when the bin is full.",
     image: trashbin,
     tags: ["AT89S52", "IoT", "Keil uVision5", "WLPRO", "Machine Language", "Keil C"],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Homestay Booking System",
+    description:
+      "An Admin-Role Homestay Booking System is a web application for booking homestays.",
+    image: homestayBooking,
+    tags: ["PHP", "MySQL", "JQuery", "Bootstrap"],
     liveUrl: "#",
     githubUrl: "#",
   },

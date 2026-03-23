@@ -8,7 +8,7 @@ import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
 const skillGroups = [
   {
     label: "Full Stack",
-    tags: ["React", "React Native", "Express", "Neon PostgreSQL", "Tailwind CSS"],
+    tags: ["React", "React Native", "Express", "Node.js", "Neon PostgreSQL", "Tailwind CSS"],
   },
   {
     label: "IoT",
@@ -16,7 +16,11 @@ const skillGroups = [
   },
   {
     label: "Automation",
-    tags: ["n8n"],
+    tags: ["n8n", "Python"],
+  },
+  {
+    label: "Programming Language",
+    tags: ["C++", "Python", "PHP", "JavaScript", "Java"],
   },
   {
     label: "Tools",

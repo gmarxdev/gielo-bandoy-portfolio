@@ -1,8 +1,12 @@
-import { GraduationCap, Briefcase, Calendar } from "lucide-react";
+import { GraduationCap, Briefcase, Calendar, Download } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
+
+// Replace this with your actual resume filename when you place it inside the 'public' folder
+const RESUME_FILE_NAME = "/my-resume.pdf";
 
 const experiences = [
   {
@@ -54,9 +58,22 @@ const ResumeSection = () => {
                 transition: "width 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s",
               }}
             />
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
               My academic background and professional journey
             </p>
+
+            {/* Download Resume Button */}
+            <div 
+              className={`flex justify-center scroll-reveal ${sectionVisible ? "revealed" : ""}`}
+              style={{ transitionDelay: '0.4s' }}
+            >
+              <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300 group">
+                <a href={RESUME_FILE_NAME} download>
+                  <Download className="mr-2 h-5 w-5 group-hover:-translate-y-1 group-hover:scale-110 transition-transform duration-300" />
+                  Download Resume
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">

@@ -98,8 +98,7 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="h-4 w-4 text-primary fill-primary" /> and
-            lots of coffee
+            Continuesly improving and learning
           </p>
         </div>
       </div>

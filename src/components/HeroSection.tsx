@@ -1,6 +1,8 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
+
+const RESUME_FILE_NAME = "/BANDOY_RESUME.pdf";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -51,7 +53,7 @@ const HeroSection = () => {
 
         {/* Action Buttons */}
         <div 
-          className="flex flex-col sm:flex-row items-center gap-4 justify-center animate-fade-up w-full max-w-md mx-auto"
+          className="flex flex-col sm:flex-row items-center gap-4 justify-center animate-fade-up w-full max-w-2xl mx-auto"
           style={{ animationDelay: '0.4s' }}
         >
           <Button
@@ -69,6 +71,17 @@ const HeroSection = () => {
             className="w-full sm:w-auto rounded-full px-8 h-12 text-base"
           >
             Contact Me
+          </Button>
+          <Button
+            size="lg"
+            variant="secondary"
+            asChild
+            className="w-full sm:w-auto rounded-full px-8 h-12 text-base group"
+          >
+            <a href={RESUME_FILE_NAME} download>
+              <Download className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+              Download Resume
+            </a>
           </Button>
         </div>
 

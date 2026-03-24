@@ -1,11 +1,9 @@
-import { GraduationCap, Briefcase, Calendar, Download } from "lucide-react";
+import { GraduationCap, Briefcase, Calendar } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const RESUME_FILE_NAME = "/BANDOY_RESUME.pdf";
 
 const skillGroups = [
   {
@@ -63,17 +61,9 @@ const AboutSection = () => {
             className={`scroll-reveal ${sectionVisible ? "revealed" : ""}`}
           >
             {/* Section Header */}
-            <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <div>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">Background</h2>
-                <div className="w-16 h-1.5 bg-primary rounded-full" />
-              </div>
-              <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300 group w-fit">
-                <a href={RESUME_FILE_NAME} download>
-                  <Download className="mr-2 h-5 w-5 group-hover:-translate-y-1 group-hover:scale-110 transition-transform duration-300" />
-                  Download Resume
-                </a>
-              </Button>
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">Background</h2>
+              <div className="w-16 h-1.5 bg-primary rounded-full" />
             </div>
 
             {/* ── Top Half: Stats & Skills ── */}

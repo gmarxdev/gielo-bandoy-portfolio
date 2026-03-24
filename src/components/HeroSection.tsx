@@ -1,10 +1,8 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
 
 const HeroSection = () => {
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -15,112 +13,92 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-background"
     >
-      {/* Enhanced Geometric Accent with Float Animation */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-glow-pulse animate-float" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-glow-pulse animate-float" style={{ animationDelay: '1s' }} />
+      {/* Subtle Background Elements */}
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10" />
+      <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -z-10" />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Photo Container with Enhanced Animations */}
-            <div className="animate-zoom-in order-2 md:order-1 flex justify-center" style={{ animationDelay: '0.2s' }}>
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-glow-pulse"></div>
-                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-primary/20 overflow-hidden bg-secondary flex items-center justify-center hover-lift transform hover:rotate-2 transition-all duration-500">
-                  <img
-                    src={profileImage}
-                    alt="My Profile"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Text Content with Staggered Animations */}
-            <div className="order-1 md:order-2 text-center md:text-left">
-              <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
+      <div className="container mx-auto px-4 lg:px-8 z-10">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20">
+          
+          {/* Left Content: Text & Actions */}
+          <div className="flex-1 text-center md:text-left space-y-8 animate-fade-up">
+            <div className="space-y-4">
+              <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase rounded-full">
                 Software Engineer & IoT Developer
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                <span className="block animate-text-reveal" style={{ animationDelay: '0.3s' }}>
-                  Hi, I'm{" "}
-                </span>
-                <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-text-reveal" style={{ animationDelay: '0.5s' }}>
-                  Gielo Mar Bandoy
-                </span>
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground">
+                Hi, I'm <br className="hidden md:block" />
+                <span className="text-primary">Gielo Mar Bandoy</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: '0.7s' }}>
-                I build practical digital solutions. Specializing in web apps, mobile development, and IoT
-                integration.
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto md:mx-0">
+                I build practical, modern digital solutions specializing in web apps, mobile development, and IoT integration.
               </p>
             </div>
-          </div>
 
-
-          {/* Buttons and Social Links with Enhanced Animations */}
-          <div className="mt-12 md:col-span-2 flex flex-col items-center md:items-start md:ml-12">
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
               <Button
                 size="lg"
                 onClick={() => scrollToSection("portfolio")}
-                className="group shadow-lg hover:shadow-2xl transition-all hover-lift animate-bounce-in hover-glow"
-                style={{ animationDelay: '0.9s' }}
+                className="w-full sm:w-auto rounded-full px-8 h-12 text-base group"
               >
                 View My Work
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection("contact")}
-                className="shadow-lg hover:shadow-2xl transition-all hover-lift animate-bounce-in"
-                style={{ animationDelay: '1.1s' }}
+                className="w-full sm:w-auto rounded-full px-8 h-12 text-base"
               >
                 Contact Me
               </Button>
             </div>
 
-            {/* Social Links with Staggered Animation */}
-            <div className="flex gap-4">
+            <div className="flex items-center justify-center md:justify-start gap-5 pt-4">
               <a
                 href="https://github.com/gmarxdev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all hover-lift animate-scale-in hover:rotate-12 duration-300"
-                style={{ animationDelay: '1.3s' }}
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
               >
-                <Github className="h-5 w-5" />
+                <Github className="h-6 w-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/gielo-mar-bandoy-b19460339"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all hover-lift animate-scale-in hover:rotate-12 duration-300"
-                style={{ animationDelay: '1.4s' }}
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-6 w-6" />
               </a>
               <a
                 href="https://mail.google.com"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all hover-lift animate-scale-in hover:rotate-12 duration-300"
-                style={{ animationDelay: '1.5s' }}
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Email"
               >
-                <Mail className="h-5 w-5" />
+                <Mail className="h-6 w-6" />
               </a>
             </div>
           </div>
+
+          {/* Right Content: Profile Image */}
+          <div className="flex-1 flex justify-center md:justify-end w-full animate-fade-in">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[50px] -z-10" />
+              <img
+                src={profileImage}
+                alt="Gielo Mar Bandoy Profile"
+                className="w-full h-full object-cover rounded-full border-4 border-background shadow-xl"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
-
-      {/* Enhanced Scroll Indicator
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2 hover:border-accent transition-colors duration-300 cursor-pointer">
-          <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
-        </div>
-      </div> */}
     </section>
   );
 };

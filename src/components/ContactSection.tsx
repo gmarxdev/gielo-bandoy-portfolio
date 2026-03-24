@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -24,6 +24,12 @@ const ContactSection = () => {
       value: "github.com/gmarxdev",
       href: "https://github.com/gmarxdev",
     },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "09382005896",
+      href: "tel:09382005896",
+    },
   ];
 
   return (
@@ -44,7 +50,7 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             {socialLinks.map((social, index) => (
               <a 
                 key={index} 

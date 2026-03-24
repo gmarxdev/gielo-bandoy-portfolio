@@ -87,7 +87,7 @@ const AboutSection = () => {
                     Role
                   </span>
                   <span className="text-foreground font-medium">
-                    Software Engineer & IoT Specialist
+                    Software Engineer
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border/60 pb-4 hover:border-primary transition-colors">
@@ -95,7 +95,7 @@ const AboutSection = () => {
                     Focus
                   </span>
                   <span className="text-foreground font-medium">
-                    Web Apps, Hardware Automation, Data Logging
+                    Full-Stack Development, System Architecture, API Integration
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border/60 pb-4 hover:border-primary transition-colors">

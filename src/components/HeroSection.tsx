@@ -35,7 +35,7 @@ const HeroSection = () => {
               Gielo Mar Bandoy
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Software Engineer & IoT Developer
+              Software Engineer
             </h2>
           </div>
         </div>
@@ -43,9 +43,9 @@ const HeroSection = () => {
         {/* Short Bio / Stats Line */}
         <div className="max-w-3xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-            Delivered fully functional systems for varied clients | Implemented advanced IoT Data logging & Automations
+            Building robust web applications and scalable full-stack solutions
             <br className="hidden md:block" />
-            Specialist in connecting software logic with hardware operations
+            Specialized in integrating complex systems, real-time data, and hardware APIs
           </p>
         </div>
 

@@ -47,15 +47,39 @@ const AboutSection = () => {
 
             {/* ── Bio & Skills ── */}
             <div className="order-1 md:order-2 space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About Me</h2>
-                <div className="w-12 h-1 bg-primary rounded-full" />
-                <p className="text-lg text-muted-foreground leading-relaxed pt-2">
-                  I'm a passionate developer focused on building practical, user-friendly digital solutions. I specialize in merging software with hardware to create systems that solve real problems.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Whether it is crafting a clean web application or developing an automated IoT system, my goal is always to deliver impactful and efficient results.
-                </p>
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">About Me</h2>
+                  <div className="w-12 h-1 bg-primary rounded-full" />
+                </div>
+                
+                {/* Stat Sheet Info */}
+                <div className="space-y-4 pt-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border pb-4">
+                    <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider min-w-[100px]">
+                      Role
+                    </span>
+                    <span className="text-foreground font-medium">
+                      Software Engineer & IoT Specialist
+                    </span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border pb-4">
+                    <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider min-w-[100px]">
+                      Education
+                    </span>
+                    <span className="text-foreground font-medium">
+                      BS Computer Engineering (Expected 2026)
+                    </span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border pb-4">
+                    <span className="text-xs font-semibold text-primary/70 uppercase tracking-wider min-w-[100px]">
+                      Focus
+                    </span>
+                    <span className="text-foreground font-medium">
+                      Web Apps, Hardware Automation, Data Logging
+                    </span>
+                  </div>
+                </div>
               </div>
 
               {/* Minimalist Skills List */}

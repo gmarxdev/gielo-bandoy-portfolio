@@ -25,9 +25,6 @@ const HeroSection = () => {
           {/* Left Content: Text & Actions */}
           <div className="flex-1 text-center md:text-left space-y-8 animate-fade-up">
             <div className="space-y-4">
-              <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-md font-medium tracking-wider uppercase rounded-full">
-                Software Engineer & IoT Developer
-              </span>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground">
                 Hi, I'm <br className="hidden md:block" />
                 <span className="text-primary">Gielo Mar Bandoy</span>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const RESUME_FILE_NAME = "/my-resume.pdf";
+const RESUME_FILE_NAME = "/BANDOY_RESUME.pdf";
 
 const skillGroups = [
   {
@@ -95,7 +95,7 @@ const AboutSection = () => {
                     Focus
                   </span>
                   <span className="text-foreground font-medium">
-                    Web Apps, Hardware Automation, Data
+                    Web Apps, Hardware Automation, Data Logging
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border/60 pb-4 hover:border-primary transition-colors">

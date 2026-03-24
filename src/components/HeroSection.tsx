@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-4 lg:px-8 z-10">
-        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-5 lg:gap-20">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 lg:gap-10">
           
           {/* Left Content: Text & Actions */}
           <div className="flex-1 text-center md:text-left space-y-8 animate-fade-up">

@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Continuesly improving and learning
+            Continuously improving and learning
           </p>
         </div>
       </div>

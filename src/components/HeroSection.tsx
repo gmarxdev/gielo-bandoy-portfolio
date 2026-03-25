@@ -45,9 +45,7 @@ const HeroSection = () => {
         {/* Short Bio / Stats Line */}
         <div className="max-w-3xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-            Building robust web applications and scalable full-stack solutions
-            <br className="hidden md:block" />
-            Specialized in integrating complex systems, real-time data, and hardware APIs
+            Developer who can think, build, and adapt
           </p>
         </div>
 
@@ -58,7 +56,7 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            onClick={() => scrollToSection("portfolio")}
+            onClick={() => scrollToSection("projects")}
             className="w-full sm:w-auto rounded-full px-8 h-12 text-base group"
           >
             View My Work

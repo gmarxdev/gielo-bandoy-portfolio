@@ -25,11 +25,11 @@ const HeroSection = () => {
         
         {/* Profile and Name Row */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8 animate-fade-in">
-          <div className="relative w-40 h-40 md:w-50 md:h-50 shrink-0">
+          <div className="relative w-48 h-48 md:w-64 md:h-64 shrink-0">
             <img
               src={profileImage}
               alt="Gielo Mar Bandoy"
-              className="w-full h-full object-cover rounded-full border-4 border-background shadow-lg shadow-accent/20"
+              className="w-full h-full object-cover rounded-full border-4 border-background"
             />
           </div>
           <div className="flex flex-col text-center md:text-left">

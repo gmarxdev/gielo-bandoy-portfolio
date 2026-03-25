@@ -276,7 +276,7 @@ const ProjectSection = () => {
   const [activeTab, setActiveTab] = useState<Tab>("personal");
 
   return (
-    <section id="portfolio" className="py-20 lg:py-32">
+    <section id="projects" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-[720px] mx-auto">
           {/* Section Header */}

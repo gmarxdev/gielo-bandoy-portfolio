@@ -1,6 +1,6 @@
 import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/ISOTECH_PROFILE.jpg";
+import profileImage from "@/assets/profile.png";
 
 const RESUME_FILE_NAME = "/BANDOY_RESUME.pdf";
 

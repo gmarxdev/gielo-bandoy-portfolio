@@ -271,7 +271,7 @@ const ProjectCarousel = ({ projects }: { projects: Project[] }) => {
 
 type Tab = "personal" | "client";
 
-const PortfolioSection = () => {
+const ProjectSection = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal({ threshold: 0.1 });
   const [activeTab, setActiveTab] = useState<Tab>("personal");
 
@@ -346,4 +346,4 @@ const PortfolioSection = () => {
   );
 };
 
-export default PortfolioSection;
+export default ProjectSection;

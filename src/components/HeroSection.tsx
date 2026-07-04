@@ -2,7 +2,7 @@ import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/profile.png";
 
-const RESUME_FILE_NAME = "/BANDOY_RESUME.pdf";
+const RESUME_FILE_NAME = "/GIELO_MAR_R_BANDOY_CV.pdf";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {

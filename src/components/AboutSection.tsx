@@ -1,39 +1,53 @@
-import { GraduationCap, Briefcase, Calendar } from "lucide-react";
+import { GraduationCap, Briefcase, Calendar, ShieldCheck, Award, BookOpen, Trophy } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const skillGroups = [
   {
-    label: "Core",
-    tags: ["React", "Express", "Node.js", "Neon PostgreSQL"],
+    label: "Programming",
+    tags: ["PHP", "JavaScript", "SQL", "Python", "Java"],
   },
   {
-    label: "IoT & Hardware",
-    tags: ["ESP32", "Arduino", "Raspberry Pi", "Firebase"],
+    label: "Web & Backend",
+    tags: ["CodeIgniter 4", "Vue.js", "jQuery", "HTML5", "CSS3", "Bootstrap", "REST APIs"],
   },
   {
-    label: "Languages",
-    tags: ["C++", "Python", "PHP", "JavaScript"],
+    label: "Database & Tools",
+    tags: ["MySQL", "Git", "GitHub", "Postman"],
+  },
+  {
+    label: "Cybersecurity",
+    tags: [
+      "Linux Administration",
+      "Networking Fundamentals",
+      "OWASP Top 10",
+      "Vulnerability Assessment",
+      "Incident Response Fundamentals",
+      "Kali Linux",
+    ],
+  },
+  {
+    label: "Cloud",
+    tags: ["AWS Fundamentals", "Cloud Security Concepts (Learning)"],
   },
 ];
 
 const experiences = [
   {
-    role: "Freelance Web & IoT Developer",
-    company: "Client-Based Projects",
-    period: "2023 - Present",
-    description: "Designed, developed, and deployed fully functional systems for various clients. Key projects include a Restaurant POS, Smart Egg Grader & Sorter, Dormitory Management System, and an IoT Automated Seaweed Dryer System.",
+    role: "Freelance Software & IoT Developer",
+    company: "Independent",
+    period: "2025 - Present",
+    description: "Delivered custom web applications and IoT solutions for clients. Managed projects from requirements gathering to deployment and maintenance. Worked directly with clients to translate business requirements into software solutions.",
     tags: ["Full Stack Development", "IoT System Design", "UX/UI"],
   },
   {
-    role: "Web Developer (OJT)",
-    company: "On-the-Job Training Experience",
+    role: "Web Developer Intern (OJT)",
+    company: "ISOTECH INC.",
     period: "Recent",
-    description: "Developed an Admin-Role Homestay Booking System web application. Handled the backend architecture, database schema, and frontend integration.",
-    tags: ["PHP", "MySQL", "JQuery", "Bootstrap", "Croppy/Dropzone", "MPDF"],
+    description: "Developed and maintained business web applications using PHP, CodeIgniter 4, Apache, MySQL, jQuery, Bootstrap, CSS and JavaScript (LAMP Stack). Implemented responsive interfaces and integrated REST APIs. Participated in testing, debugging, deployment, and maintenance.",
+    tags: ["PHP", "MySQL", "CodeIgniter 4", "Bootstrap", "REST APIs"],
   },
 ];
 
@@ -41,8 +55,54 @@ const education = [
   {
     degree: "Bachelor of Science in Computer Engineering",
     school: "Surigao del Norte State University",
-    period: "Aug 2022 - June 2026",
-    description: "Currently enrolled. Gained strong fundamentals in software engineering, embedded systems, microcontrollers, and full-stack development. Active in building capstone hardware/software integrations.",
+    period: "2022 - 2026",
+    description: "Gained strong fundamentals in software engineering, embedded systems, microcontrollers, and full-stack development. Active in building capstone hardware/software integrations and working on academic cybersecurity/IoT applications.",
+  },
+];
+
+const professionalDevelopment = [
+  {
+    title: "Google Cybersecurity Professional Certificate",
+    detail: "In Progress. Developing skills in security analyst roles, asset protection, network security, and incident response.",
+  },
+  {
+    title: "Cybersecurity & Ethical Hacking",
+    detail: "Hands-on, self-paced training in Linux administration, networking fundamentals, OWASP Top 10, and vulnerability assessment.",
+  },
+  {
+    title: "Research Paper Publication",
+    detail: "Published a research paper in the Research and Education Journal by the Asian Intellect for Academic Organization and Development Inc. (2026).",
+  },
+  {
+    title: "Tech Startup Journey & BRAINS 2025",
+    detail: "Explored AI for Sustainability and participated in startup acceleration workshops (2025).",
+  },
+  {
+    title: "Waventures Startup Challenge Workshop",
+    detail: "Gained design thinking, validation, and tech business model experience (2024).",
+  },
+];
+
+const awards = [
+  {
+    title: "Web Design Champion",
+    issuer: "ICpEP.se National Digital Olympiads (2026)",
+  },
+  {
+    title: "Top 10 Finalist",
+    issuer: "Philippine Startup Challenge X Regional Showcase (2025)",
+  },
+  {
+    title: "Java Programming Champion",
+    issuer: "ICpEP.se Regional Convention (2025)",
+  },
+  {
+    title: "Java Programming 1 Certificate",
+    issuer: "Java Competition Certificate of Completion awarded by CODECHUM (2025)",
+  },
+  {
+    title: "3rd Place",
+    issuer: "Regional Waventures Startup Competition (2024)",
   },
 ];
 
@@ -77,7 +137,7 @@ const AboutSection = () => {
                     Role
                   </span>
                   <span className="text-foreground font-medium">
-                    Software Engineer
+                    Software Engineer | Aspiring Cloud Security Engineer
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border/60 pb-4 hover:border-primary transition-colors">
@@ -85,7 +145,7 @@ const AboutSection = () => {
                     Focus
                   </span>
                   <span className="text-foreground font-medium">
-                    Full-Stack Development, System Architecture, API Integration
+                    Full-Stack Development, Backend APIs, Secure Coding
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b border-border/60 pb-4 hover:border-primary transition-colors">
@@ -93,12 +153,12 @@ const AboutSection = () => {
                     Location
                   </span>
                   <span className="text-foreground font-medium">
-                    Philippines
+                    Del Carmen, Surigao del Norte (Open to Relocation)
                   </span>
                 </div>
               </div>
 
-              {/* Minimalist Skills List */}
+              {/* Technical Skills List */}
               <div className="space-y-4">
                 <h3 className="text-xl font-bold mb-6 text-foreground">Technical Arsenal</h3>
                 <div className="space-y-4">
@@ -200,6 +260,67 @@ const AboutSection = () => {
                         </CardContent>
                       </Card>
                     </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* ── Additional Info: Development & Awards ── */}
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mt-20">
+              
+              {/* Professional Development Column */}
+              <div>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Professional Development</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {professionalDevelopment.map((dev, index) => (
+                    <Card key={index} className="border-2 bg-background hover:border-primary transition-all duration-300 hover:shadow-xl">
+                      <CardContent className="p-6 flex gap-4 items-start">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                          {dev.title.includes("Cybersecurity") ? (
+                            <ShieldCheck className="w-5 h-5 animate-pulse" />
+                          ) : (
+                            <BookOpen className="w-5 h-5" />
+                          )}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-base text-foreground mb-1 transition-colors hover:text-primary">{dev.title}</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{dev.detail}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* Awards & Achievements Column */}
+              <div>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Awards & Achievements</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {awards.map((award, index) => (
+                    <Card key={index} className="border-2 bg-background hover:border-primary transition-all duration-300 hover:shadow-xl">
+                      <CardContent className="p-6 flex gap-4 items-start">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                          <Trophy className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-base text-foreground mb-1 transition-colors hover:text-primary">{award.title}</h4>
+                          <p className="text-sm text-muted-foreground">{award.issuer}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
               </div>

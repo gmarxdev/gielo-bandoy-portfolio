@@ -28,24 +28,24 @@ const HeroSection = () => {
           <div className="relative w-48 h-48 md:w-64 md:h-64 shrink-0">
             <img
               src={profileImage}
-              alt="Gielo Mar Bandoy"
+              alt="Gielo Mar R. Bandoy"
               className="w-full h-full object-cover rounded-full border-4 border-background"
             />
           </div>
           <div className="flex flex-col text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 tracking-tight">
-              Gielo Mar Bandoy
+              Gielo Mar R. Bandoy
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Software Engineer
+              Software Engineer | Aspiring Cloud Security Engineer
             </h2>
           </div>
         </div>
 
         {/* Short Bio / Stats Line */}
-        <div className="max-w-3xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-            Developer who can think, build, and adapt
+        <div className="max-w-3xl mb-10 animate-fade-up text-center" style={{ animationDelay: '0.2s' }}>
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+            Computer Engineering graduate with practical experience developing web applications (LAMP Stack) through on-the-job training and freelance projects. Passionate about cybersecurity and secure software development, currently building the technical foundation for a career as a Cloud Security Engineer.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ const HeroSection = () => {
             <Github className="h-6 w-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/gielo-mar-bandoy-b19460339"
+            href="https://www.linkedin.com/in/gielo-mar-bandoy"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-transform hover:scale-110"
@@ -107,7 +107,7 @@ const HeroSection = () => {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href="https://mail.google.com"
+            href="mailto:gmarbandoy@gmail.com"
             className="text-muted-foreground hover:text-primary transition-transform hover:scale-110"
             aria-label="Email"
           >

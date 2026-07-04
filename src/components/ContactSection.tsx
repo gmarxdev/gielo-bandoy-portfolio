@@ -10,13 +10,13 @@ const ContactSection = () => {
       icon: Mail,
       label: "Email",
       value: "gmarbandoy@gmail.com",
-      href: "https://mail.google.com",
+      href: "mailto:gmarbandoy@gmail.com",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "linkedin.com/in/gielo-mar-bandoy",
-      href: "https://www.linkedin.com/in/gielo-mar-bandoy-b19460339",
+      href: "https://www.linkedin.com/in/gielo-mar-bandoy",
     },
     {
       icon: Github,

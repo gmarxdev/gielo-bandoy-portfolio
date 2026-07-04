@@ -61,7 +61,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/gielo-mar-bandoy-b19460339"
+                href="https://www.linkedin.com/in/gielo-mar-bandoy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-background border-2 border-border hover:border-primary flex items-center justify-center transition-all"
@@ -69,7 +69,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://mail.google.com"
+                href="mailto:gmarbandoy@gmail.com"
                 className="w-10 h-10 rounded-lg bg-background border-2 border-border hover:border-primary flex items-center justify-center transition-all"
               >
                 <Mail className="h-5 w-5" />
